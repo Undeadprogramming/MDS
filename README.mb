@@ -1,4 +1,4 @@
-1. přidat nginx a ffmpeg do PATH
-2. spustit nginx "nginx"
-3. spustit ffmpeg "ffmpeg -re -f lavfi -i testsrc=size=1280x720:rate=25 -f lavfi -i sine=frequency=1000 -c:v libx264 -preset ultrafast -tune zerolatency -profile:v baseline -level 3.0 -pix_fmt yuv420p -c:a aac -b:a 128k -f hls -hls_time 4 -hls_list_size 10 -hls_flags delete_segments site/hls/index.m3u8"
+1. přidat nginx a ffmpeg do PATH, nginx ze elearningu https://moodle.vut.cz/mod/resource/view.php?id=576887, ffmpeg např. https://github.com/GyanD/codexffmpeg/releases/download/2025-12-24-git-abb1524138/ffmpeg-2025-12-24-git-abb1524138-full_build.zip
+2. přejít do složky "nginx" a spustit nginx "nginx"
+3. v dalším terminálu přejít do složky "nginx" a spustit ffmpeg "ffmpeg -re -f lavfi -i testsrc=size=1280x720:rate=25 -f lavfi -i sine=frequency=1000 -c:v libx264 -preset ultrafast -tune zerolatency -profile:v baseline -level 3.0 -pix_fmt yuv420p -c:a aac -b:a 128k -f hls -hls_time 4 -hls_list_size 10 -hls_flags delete_segments site/hls/index.m3u8"
 4. počkat cca 20 sekund než se načte video, pak by mělo jet na vlc pomocí síťový proud a "http://localhost/hls/index.m3u8" a na url buď stejné nebo http://localhost/index.html  
