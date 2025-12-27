@@ -1,0 +1,16 @@
+# Windows
+Thumbs.db
+*.log
+
+# Node modules
+server/node_modules/
+
+# HLS segmenty
+nginx/site/hls/*.ts
+nginx/temp/
+
+# VSCode
+.vscode/
+
+#ffmpeg
+ffmpeg/

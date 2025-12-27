@@ -1,0 +1,3 @@
+@ECHO OFF
+ECHO Killing any existing Nginx processes...
+tskill nginx /a
